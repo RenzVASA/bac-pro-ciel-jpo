@@ -77,24 +77,20 @@ function renderDemoData() {
 }
 
 function generateDemoSessions(n) {
-  const profiles = ['elec','net','cyber','gen'];
   const sessions = [];
   for (let i = 0; i < n; i++) {
-    const profile = profiles[Math.floor(Math.random()*profiles.length)];
-    const score = Math.round(30 + Math.random() * 40);
-    const date = new Date(Date.now() - Math.random() * 7 * 24 * 3600 * 1000);
     sessions.push({
       session_id: 'demo_' + i,
-      timestamp: date.toISOString(),
-      profile_dominant: profile,
-      score_pct: score,
-      score_gained: Math.round(score * 0.56),
+      timestamp: new Date().toISOString(),
+      profile_dominant: 'elec',  // tu peux mettre 'elec', 'net', 'cyber' ou 'gen' par défaut
+      score_pct: 0,
+      score_gained: 0,
       score_possible: 56,
       scores_by_pole: {
-        elec: Math.round(Math.random() * 15),
-        net: Math.round(Math.random() * 15),
-        cyber: Math.round(Math.random() * 15),
-        gen: Math.round(Math.random() * 11),
+        elec: 0,
+        net: 0,
+        cyber: 0,
+        gen: 0,
       }
     });
   }
