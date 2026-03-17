@@ -92,29 +92,31 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
   import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 
+  // Configuration Firebase
   const firebaseConfig = {
-  apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
-  authDomain: "ciel-jpo-2026.firebaseapp.com",
-  databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "ciel-jpo-2026",
-  storageBucket: "ciel-jpo-2026.firebasestorage.app",
-  messagingSenderId: "171327602979",
-  appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
-};
+    apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
+    authDomain: "ciel-jpo-2026.firebaseapp.com",
+    databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "ciel-jpo-2026",
+    storageBucket: "ciel-jpo-2026.firebasestorage.app",
+    messagingSenderId: "171327602979",
+    appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
+  };
 
+  // Initialisation Firebase
   const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
+  const db = getDatabase(app);
+
+  // Rendre Firebase accessible globalement
+  window._firebaseDb = db;
+  window._firebaseRef = ref;
+  window._firebasePush = push;
+  window._firebaseSet = set;
+
+  console.log('[Firebase] Connecté ✓');
 </script>
 
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-    window._firebaseDb = db;
-    window._firebaseRef = ref;
-    window._firebasePush = push;
-    window._firebaseSet = set;
-    console.log('[Firebase] Connecté ✓');
-  </script>
-
-  <script src="../js/quiz.js"></script>
+<!-- Ensuite ton quiz.js -->
+<script src="../js/quiz.js"></script>
 </body>
 </html>
