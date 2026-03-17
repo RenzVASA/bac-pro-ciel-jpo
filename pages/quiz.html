@@ -88,21 +88,23 @@
     </div>
   </main>
 
-  <!-- Firebase SDK -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 
-    // ── CONFIG FIREBASE (à remplacer par vos propres clés) ─
-    const firebaseConfig = {
-      apiKey: "VOTRE_API_KEY",
-      authDomain: "VOTRE_PROJECT.firebaseapp.com",
-      databaseURL: "https://VOTRE_PROJECT-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "VOTRE_PROJECT_ID",
-      storageBucket: "VOTRE_PROJECT.appspot.com",
-      messagingSenderId: "VOTRE_SENDER_ID",
-      appId: "VOTRE_APP_ID"
-    };
+  const firebaseConfig = {
+    apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
+    authDomain: "ciel-jpo-2026.firebaseapp.com",
+    databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "ciel-jpo-2026",
+    storageBucket: "ciel-jpo-2026.firebasestorage.app",
+    messagingSenderId: "171327602979",
+    appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+</script>
 
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
