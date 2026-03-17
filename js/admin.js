@@ -70,20 +70,14 @@ async function fetchSessions() {
 }
 
 // ── DEMO DATA (si Firebase pas configuré) ─────────────────
-function renderDemoData() {
-  const demo = generateDemoSessions(120);
-  renderDashboard(demo);
-  document.getElementById('admin-sub').textContent = '⚠️ Données de démonstration (Firebase non connecté)';
-}
-
 function generateDemoSessions(n) {
   const sessions = [];
   for (let i = 0; i < n; i++) {
     sessions.push({
       session_id: 'demo_' + i,
-      timestamp: new Date().toISOString(),
-      profile_dominant: 'elec',  // tu peux mettre 'elec', 'net', 'cyber' ou 'gen' par défaut
-      score_pct: 0,
+      timestamp: new Date().toISOString(),   // date actuelle fixe
+      profile_dominant: 'elec',             // profil par défaut
+      score_pct: 0,                          // tout à zéro
       score_gained: 0,
       score_possible: 56,
       scores_by_pole: {
@@ -96,6 +90,7 @@ function generateDemoSessions(n) {
   }
   return sessions;
 }
+
 
 // ── RENDER DASHBOARD ──────────────────────────────────────
 function renderDashboard(sessions) {
