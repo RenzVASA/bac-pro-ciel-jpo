@@ -137,29 +137,28 @@
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-  import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+  import { getDatabase, ref, onValue, get } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
-  authDomain: "ciel-jpo-2026.firebaseapp.com",
-  databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "ciel-jpo-2026",
-  storageBucket: "ciel-jpo-2026.firebasestorage.app",
-  messagingSenderId: "171327602979",
-  appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
-};
+  // Config Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
+    authDomain: "ciel-jpo-2026.firebaseapp.com",
+    databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "ciel-jpo-2026",
+    storageBucket: "ciel-jpo-2026.firebasestorage.app",
+    messagingSenderId: "171327602979",
+    appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
+  };
 
+  // Initialisation Firebase
   const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
+  const db = getDatabase(app);
+
+  // Rendre Firebase accessible pour admin.js
+  window._adminFirebase = { db, ref, onValue, get };
+  console.log('[Admin Firebase] Connecté ✓');
 </script>
 
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-    window._adminFirebase = { db, ref, onValue, get };
-    console.log('[Admin Firebase] Connecté ✓');
-  </script>
-
-  <script src="../js/admin.js"></script>
+<script src="../js/admin.js"></script>
 </body>
 </html>
