@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz d'orientation – Bac Pro CIEL</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/quiz.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__logo">
+      <a href="../index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none">
+        <span class="nav__badge">BAC PRO</span>
+        <span class="nav__name">CIEL</span>
+      </a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="../index.html">← Accueil</a></li>
+      <li><a href="../index.html#formation">La formation</a></li>
+    </ul>
+  </nav>
+
+  <main class="quiz-page">
+    <!-- INTRO -->
+    <div class="quiz-intro" id="quiz-intro">
+      <div class="quiz-intro__inner">
+        <span class="section__tag">Quiz d'orientation</span>
+        <h1 class="quiz-intro__title">Cette formation<br/>est-elle faite <span class="quiz-highlight">pour toi ?</span></h1>
+        <p class="quiz-intro__sub">20 questions basées sur le référentiel officiel du Bac Pro CIEL (arrêté du 13 fév. 2023). Durée : environ 5 minutes.</p>
+        <div class="quiz-intro__chips">
+          <span>🔌 Électronique</span>
+          <span>🌐 Réseaux</span>
+          <span>🛡️ Cybersécurité</span>
+          <span>📊 Analyse de données</span>
+        </div>
+        <button class="btn btn--primary btn--xl" id="btn-start">
+          Démarrer le quiz
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="quiz-intro__note">Tes réponses sont anonymes · Aucun compte requis</p>
+      </div>
+    </div>
+
+    <!-- QUIZ FORM -->
+    <div class="quiz-wrap" id="quiz-wrap" style="display:none">
+      <div class="quiz-header">
+        <div class="quiz-progress">
+          <span class="quiz-progress__label" id="q-label">Question 1 / 20</span>
+          <div class="quiz-progress__bar">
+            <div class="quiz-progress__fill" id="q-fill" style="width:5%"></div>
+          </div>
+        </div>
+        <div class="quiz-score-live">Score : <span id="live-score">0</span> pts</div>
+      </div>
+
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-card__pole" id="q-pole"></div>
+        <h2 class="quiz-card__question" id="q-text"></h2>
+        <div class="quiz-card__options" id="q-options"></div>
+        <button class="btn btn--primary quiz-next-btn" id="btn-next" style="display:none">
+          Question suivante →
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="quiz-results" id="quiz-results" style="display:none">
+      <div class="results-inner">
+        <div class="results-trophy" id="results-trophy">🏆</div>
+        <h2 class="results-title" id="results-title">Ton profil CIEL</h2>
+        <p class="results-subtitle" id="results-subtitle"></p>
+
+        <div class="results-bars" id="results-bars"></div>
+
+        <div class="results-profile-card" id="profile-card"></div>
+
+        <div class="results-actions">
+          <a href="../index.html" class="btn btn--ghost">Retour à l'accueil</a>
+          <button class="btn btn--primary" id="btn-retry">Refaire le quiz</button>
+        </div>
+
+        <p class="results-note" id="save-status">💾 Enregistrement de tes résultats…</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+    // ── CONFIG FIREBASE (à remplacer par vos propres clés) ─
+    const firebaseConfig = {
+      apiKey: "VOTRE_API_KEY",
+      authDomain: "VOTRE_PROJECT.firebaseapp.com",
+      databaseURL: "https://VOTRE_PROJECT-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "VOTRE_PROJECT_ID",
+      storageBucket: "VOTRE_PROJECT.appspot.com",
+      messagingSenderId: "VOTRE_SENDER_ID",
+      appId: "VOTRE_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    window._firebaseDb = db;
+    window._firebaseRef = ref;
+    window._firebasePush = push;
+    window._firebaseSet = set;
+    console.log('[Firebase] Connecté ✓');
+  </script>
+
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+# 📦 GUIDE DE MISE EN LIGNE – Bac Pro CIEL JPO
+# Étapes complètes pour déployer le site en 30 minutes
+
+## ÉTAPE 1 – Créer le dépôt GitHub
+═══════════════════════════════════════════════════════
+
+1. Aller sur https://github.com → "New repository"
+2. Nom : bac-pro-ciel-jpo
+3. Visibilité : Public (requis pour GitHub Pages gratuit)
+4. Ne PAS initialiser avec README (on pousse le nôtre)
+5. Cliquer "Create repository"
+
+
+## ÉTAPE 2 – Pousser les fichiers
+═══════════════════════════════════════════════════════
+
+Depuis le dossier du projet :
+
+  git init
+  git add .
+  git commit -m "feat: site JPO Bac Pro CIEL - version initiale"
+  git branch -M main
+  git remote add origin https://github.com/TON_COMPTE/bac-pro-ciel-jpo.git
+  git push -u origin main
+
+
+git remote add origin https://github.com/RenzVASA/bac-pro-ciel-jpo.git
+git branch -M main
+git push -u origin main
+
+## ÉTAPE 3 – Activer GitHub Pages
+═══════════════════════════════════════════════════════
+
+1. Aller dans ton dépôt → onglet "Settings"
+2. Dans le menu gauche : "Pages"
+3. Source : sélectionner "GitHub Actions"
+4. Le déploiement se lance automatiquement
+5. URL du site : https://TON_COMPTE.github.io/bac-pro-ciel-jpo
+
+
+## ÉTAPE 4 – Configurer Firebase (stockage des réponses)
+═══════════════════════════════════════════════════════
+
+4a. Créer le projet Firebase :
+    - Aller sur https://console.firebase.google.com
+    - "Ajouter un projet" → Nom : ciel-jpo-2026
+    - Désactiver Google Analytics (optionnel)
+
+4b. Activer la Realtime Database :
+    - Dans le menu gauche : "Build" → "Realtime Database"
+    - "Créer une base de données"
+    - Région : europe-west1 (Frankfurt)
+    - Mode : "Test" au départ (règles ouvertes)
+
+4c. Récupérer les clés :
+    - Engrenage ⚙️ → "Paramètres du projet"
+    - Onglet "Vos applications" → Ajouter une application Web (</>)
+    - Copier le bloc firebaseConfig
+
+4d. Remplacer dans les fichiers :
+    Ouvrir pages/quiz.html et admin/index.html
+    Remplacer le bloc :
+      apiKey: "VOTRE_API_KEY",
+      authDomain: "VOTRE_PROJECT.firebaseapp.com",
+      databaseURL: "https://VOTRE_PROJECT-default-rtdb...",
+      ...
+    Par tes vraies valeurs.
+
+4e. Déployer les règles de sécurité :
+    - Copier le contenu de firebase.rules.json
+    - Dans Firebase Console → Realtime Database → "Règles"
+    - Coller et publier
+
+4f. Pousser les modifications :
+    git add pages/quiz.html admin/index.html
+    git commit -m "config: ajout clés Firebase"
+    git push
+
+
+## ÉTAPE 5 – Changer le mot de passe admin
+═══════════════════════════════════════════════════════
+
+Ouvrir js/admin.js, ligne 7 :
+  const ADMIN_PASSWORD = 'ciel2026';
+                                ↑ changer ici
+
+git add js/admin.js
+git commit -m "security: changement mot de passe admin"
+git push
+
+
+## VÉRIFICATION FINALE
+═══════════════════════════════════════════════════════
+
+✅ Site accessible : https://TON_COMPTE.github.io/bac-pro-ciel-jpo
+✅ Quiz fonctionne et affiche le profil
+✅ Les réponses apparaissent dans Firebase Console
+✅ Dashboard admin accessible avec le bon mot de passe
+✅ Graphiques se chargent correctement
+✅ Site fonctionne sur mobile
+
+
+## URLS IMPORTANTES
+═══════════════════════════════════════════════════════
+
+Site public JPO   : https://TON_COMPTE.github.io/bac-pro-ciel-jpo
+Quiz             : https://TON_COMPTE.github.io/bac-pro-ciel-jpo/pages/quiz.html
+Dashboard admin  : https://TON_COMPTE.github.io/bac-pro-ciel-jpo/admin/
+Firebase Console : https://console.firebase.google.com
+GitHub Actions   : https://github.com/TON_COMPTE/bac-pro-ciel-jpo/actions
+
+
+## PROBLÈMES FRÉQUENTS
+═══════════════════════════════════════════════════════
+
+❓ Le quiz ne sauvegarde pas les réponses
+→ Vérifier les clés Firebase dans pages/quiz.html
+→ Vérifier que la Realtime Database est créée (pas Firestore)
+→ Ouvrir la console navigateur (F12) pour voir les erreurs
+
+❓ Le dashboard admin affiche "données de démo"
+→ Normal si Firebase n'est pas configuré
+→ Configurer Firebase (étape 4) pour les vraies données
+
+❓ Le site n'est pas déployé automatiquement
+→ Vérifier Settings → Pages → Source = "GitHub Actions"
+→ Vérifier l'onglet Actions pour voir les erreurs de déploiement
+
+❓ Erreur 404 sur GitHub Pages
+→ Attendre 2-3 minutes après le premier push
+→ Vérifier que la branche est bien "main"
