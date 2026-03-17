@@ -76,7 +76,7 @@ function generateDemoSessions(n) {
     sessions.push({
       session_id: 'demo_' + i,
       timestamp: new Date().toISOString(),   // date actuelle fixe
-      profile_dominant: 'elec',             // profil par défaut
+      profile_dominant: '',             // profil par défaut
       score_pct: 0,                          // tout à zéro
       score_gained: 0,
       score_possible: 56,
