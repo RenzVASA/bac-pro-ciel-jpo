@@ -1,6 +1,6 @@
 # 🛡️ BAC PRO CIEL – Site Journées Portes Ouvertes
 
-[![Deploy to GitHub Pages](https://github.com/VOTRE_ORG/bac-pro-ciel-jpo/actions/workflows/deploy.yml/badge.svg)](https://github.com/VOTRE_ORG/bac-pro-ciel-jpo/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://renzvasa.github.io/bac-pro-ciel-jpo/index.html)](https://github.com/VOTRE_ORG/bac-pro-ciel-jpo/actions/workflows/deploy.yml)
 
 Site web destiné aux **Journées Portes Ouvertes** du Bac Professionnel **CIEL** (Cybersécurité, Informatique et réseaux, ELectronique).
 
