@@ -197,5 +197,6 @@ Projet éducatif – Lycée Professionnel – Usage libre pour établissements s
 
 ---
 
-*Site développé dans le cadre du projet Portes Ouvertes – Bac Pro CIEL 2026*  
+*Site développé par K.vanoo (RenzVASA) dans le cadre du projet Portes Ouvertes – Bac Pro CIEL 2026*  
 *Repo : [github.com/renzvasa/bac-pro-ciel-jpo](https://github.com/renzvasa/bac-pro-ciel-jpo)*
+
