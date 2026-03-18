@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets Finaux – Bac Pro CIEL</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <a href="../index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none">
+        <span class="nav__badge">BAC PRO</span><span class="nav__name">CIEL</span>
+      </a>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="pole-electronique.html">🔌 Électronique</a></li>
+      <li><a href="pole-reseaux.html">🌐 Réseaux</a></li>
+      <li><a href="quiz.html" class="nav__cta">Quiz →</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>Projets Finaux</span>
+      </div>
+      <span class="page-hero__tag page-hero__tag--projet">Certification</span>
+      <h1 class="page-hero__title">🏆 Les Projets Finaux</h1>
+      <p class="page-hero__sub">En terminale, tu réalises 2 projets complets présentés devant un jury de professionnels. C'est ta vitrine, ton chef d'œuvre.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="info-banner">
+        <span class="info-banner__icon">📋</span>
+        <p class="info-banner__text">Les projets finaux sont des <strong>épreuves certificatives</strong> (CCF – Contrôle en Cours de Formation). Ils comptent dans ton diplôme et démontrent ta capacité à mener un projet professionnel de bout en bout. Tu travailles seul ou en binôme selon les cas.</p>
+      </div>
+
+      <!-- PROJET ELECTRONIQUE -->
+      <h2 class="section__title" style="font-size:1.8rem;margin-bottom:.5rem">🔌 Projet Final Électronique</h2>
+      <p style="color:var(--text-muted);margin-bottom:2rem">Conception et réalisation d'un système électronique complet, de Proteus jusqu'à la mise en service.</p>
+
+      <div class="activity-grid" style="margin-bottom:2rem">
+        <div class="activity-card activity-card--elec">
+          <div class="activity-card__num">EXEMPLE 1</div>
+          <div class="activity-card__icon">🌡️</div>
+          <h3 class="activity-card__title">Thermostat intelligent</h3>
+          <p class="activity-card__text">Concevoir un thermostat avec sonde de température (LM35), comparateur (LM358), affichage 7 segments et sortie relais pour piloter un radiateur. Schéma Proteus + réalisation PCB.</p>
+          <div class="activity-card__tools"><span>LM35</span><span>LM358</span><span>Proteus</span><span>Relais 12V</span></div>
+        </div>
+        <div class="activity-card activity-card--elec">
+          <div class="activity-card__num">EXEMPLE 2</div>
+          <div class="activity-card__icon">🚦</div>
+          <h3 class="activity-card__title">Feux de signalisation automatiques</h3>
+          <p class="activity-card__text">Automate à base de NE555 ou microcontrôleur PIC pour gérer un carrefour à 2 voies. Séquençage des phases, LED haute luminosité, gestion des temporisations.</p>
+          <div class="activity-card__tools"><span>NE555</span><span>PIC16F</span><span>LED HB</span><span>Temporisation</span></div>
+        </div>
+        <div class="activity-card activity-card--elec">
+          <div class="activity-card__num">EXEMPLE 3</div>
+          <div class="activity-card__icon">🏠</div>
+          <h3 class="activity-card__title">Alimentation régulée</h3>
+          <p class="activity-card__text">Alimentation de laboratoire variable 0-12V avec affichage numérique de la tension et du courant. Transformateur, pont de diodes, régulateur LM317, protection court-circuit.</p>
+          <div class="activity-card__tools"><span>LM317</span><span>Pont diodes</span><span>Afficheur LCD</span><span>Protection</span></div>
+        </div>
+      </div>
+
+      <div class="projet-final-card" style="margin-bottom:4rem">
+        <span class="projet-final-card__tag">DÉROULEMENT – PROJET ÉLECTRONIQUE</span>
+        <h3 class="projet-final-card__title">🏆 Les 6 étapes de ton projet</h3>
+        <p class="projet-final-card__text">Tu disposes de plusieurs séances de travaux pratiques pour réaliser ton projet. Un enseignant t'accompagne à chaque étape.</p>
+        <div class="projet-final-card__steps">
+          <div class="step"><div class="step__num">1</div><p class="step__text"><strong>Analyse du cahier des charges</strong> – Comprendre les contraintes fonctionnelles et techniques</p></div>
+          <div class="step"><div class="step__num">2</div><p class="step__text"><strong>Conception sur Proteus</strong> – Schéma électronique ISIS, simulation du fonctionnement</p></div>
+          <div class="step"><div class="step__num">3</div><p class="step__text"><strong>Routage PCB</strong> – Placement des composants, routage des pistes (ARES)</p></div>
+          <div class="step"><div class="step__num">4</div><p class="step__text"><strong>Réalisation</strong> – Gravure ou impression du PCB, soudure des composants</p></div>
+          <div class="step"><div class="step__num">5</div><p class="step__text"><strong>Tests & mesures</strong> – Validation avec oscilloscope et multimètre, corrections</p></div>
+          <div class="step"><div class="step__num">6</div><p class="step__text"><strong>Soutenance orale</strong> – Présentation de 15-20 min devant jury professionnel, questions-réponses</p></div>
+        </div>
+      </div>
+
+      <!-- PROJET INFORMATIQUE -->
+      <h2 class="section__title" style="font-size:1.8rem;margin-bottom:.5rem">💻 Projet Final Informatique</h2>
+      <p style="color:var(--text-muted);margin-bottom:2rem">Développement d'une solution numérique complète, de la conception jusqu'à la démonstration fonctionnelle.</p>
+
+      <div class="activity-grid" style="margin-bottom:2rem">
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">EXEMPLE 1</div>
+          <div class="activity-card__icon">🌐</div>
+          <h3 class="activity-card__title">Site web d'association</h3>
+          <p class="activity-card__text">Création complète d'un site web pour une association fictive : maquettage (Figma), développement HTML/CSS responsive, formulaire de contact, galerie photos. Hébergé sur GitHub Pages.</p>
+          <div class="activity-card__tools"><span>HTML5</span><span>CSS3</span><span>Responsive</span><span>GitHub Pages</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">EXEMPLE 2</div>
+          <div class="activity-card__icon">🐍</div>
+          <h3 class="activity-card__title">Script Python de surveillance réseau</h3>
+          <p class="activity-card__text">Script Python qui ping un ensemble d'adresses IP du réseau, génère un rapport CSV des machines actives/inactives, et envoie une alerte email en cas d'équipement non joignable.</p>
+          <div class="activity-card__tools"><span>Python 3</span><span>socket</span><span>smtplib</span><span>CSV</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">EXEMPLE 3</div>
+          <div class="activity-card__icon">🖥️</div>
+          <h3 class="activity-card__title">Infrastructure réseau virtualisée</h3>
+          <p class="activity-card__text">Déploiement d'une mini-infrastructure avec VirtualBox : serveur Debian (DHCP + DNS + fichiers Samba) + poste client Windows 10 + documentation réseau complète.</p>
+          <div class="activity-card__tools"><span>VirtualBox</span><span>Debian</span><span>DHCP/DNS</span><span>Samba</span></div>
+        </div>
+      </div>
+
+      <div class="projet-final-card" style="background:linear-gradient(135deg,var(--surface) 0%,rgba(0,180,216,.15) 100%);border-color:var(--cyan)">
+        <span class="projet-final-card__tag" style="color:var(--cyan);background:rgba(0,180,216,.1);border-color:rgba(0,180,216,.3)">DÉROULEMENT – PROJET INFORMATIQUE</span>
+        <h3 class="projet-final-card__title">🏆 Les 5 étapes de ton projet</h3>
+        <p class="projet-final-card__text">Tu développes ta solution numérique sur plusieurs séances. Tu peux choisir le sujet dans le cadre défini par l'enseignant.</p>
+        <div class="projet-final-card__steps">
+          <div class="step"><div class="step__num" style="background:var(--cyan)">1</div><p class="step__text"><strong>Analyse & Maquettage</strong> – Définir les fonctionnalités, créer des wireframes ou une description de l'infrastructure</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">2</div><p class="step__text"><strong>Développement</strong> – Coder la solution (HTML/CSS/Python) ou déployer l'infrastructure virtualisée</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">3</div><p class="step__text"><strong>Tests</strong> – Vérifier que toutes les fonctionnalités marchent, corriger les bugs</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">4</div><p class="step__text"><strong>Documentation</strong> – Rédiger la doc technique (guide d'installation, manuel utilisateur)</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">5</div><p class="step__text"><strong>Soutenance orale</strong> – Démonstration live + présentation de 15-20 min devant jury</p></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem">
+        <a href="quiz.html" class="btn btn--primary">Faire le quiz d'orientation →</a>
+        <a href="../index.html" class="btn btn--ghost">Retour à l'accueil</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem"><span class="nav__badge">BAC PRO</span><span class="nav__name">CIEL</span></div>
+          <p>Cybersécurité · Informatique et réseaux · Électronique</p>
+        </div>
+        <div class="footer__links">
+          <h4>Les pôles</h4>
+          <ul>
+            <li><a href="pole-electronique.html">🔌 Électronique</a></li>
+            <li><a href="pole-reseaux.html">🌐 Réseaux &amp; Info</a></li>
+            <li><a href="pole-cyber.html">🛡️ Cybersécurité</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Orientation</h4>
+          <ul><li><a href="quiz.html">Quiz d'orientation</a></li><li><a href="../index.html">Retour accueil</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 – Journées Portes Ouvertes – Bac Pro CIEL</p></div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
