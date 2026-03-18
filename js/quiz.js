@@ -5,142 +5,201 @@
 // ============================================================
 
 const QUESTIONS = [
-  // ── PÔLE 1 – Électronique ────────────────────────────────
+  // ── PÔLE ÉLECTRONIQUE ──────────────────────────────────
   {
     pole: 'elec', poleLabel: '🔌 Électronique',
-    text: "Quel outil utilises-tu pour mesurer la tension électrique dans un circuit ?",
-    options: ["Un oscilloscope", "Un multimètre", "Un ohmmètre uniquement", "Une sonde réseau"],
+    text: "Tu dois concevoir un circuit électronique. Quel logiciel utilises-tu pour dessiner le schéma et le simuler avant fabrication ?",
+    options: ["Microsoft Word", "Proteus Design Suite (ISIS/ARES)", "VirtualBox", "Wireshark"],
     correct: 1, points: 3
   },
   {
     pole: 'elec', poleLabel: '🔌 Électronique',
-    text: "Tu lis un schéma électronique. Quel symbole représente une résistance ?",
-    options: ["Un rectangle avec une flèche", "Un zigzag ou rectangle selon la norme", "Un cercle avec une croix", "Une ligne droite horizontale"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'elec', poleLabel: '🔌 Électronique',
-    text: "Qu'est-ce qu'un microcontrôleur comme l'Arduino ?",
-    options: ["Un processeur de serveur haute performance", "Un composant programmable qui pilote des entrées/sorties physiques", "Un type de câble réseau", "Un logiciel de simulation réseau"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'elec', poleLabel: '🔌 Électronique',
-    text: "Lors de la maintenance d'un équipement électronique, tu détectes une panne. Quelle est ta première étape ?",
-    options: ["Remplacer tous les composants", "Diagnostiquer en mesurant les tensions aux points de test", "Appeler le fabricant immédiatement", "Formater le système d'exploitation"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'elec', poleLabel: '🔌 Électronique',
-    text: "Qu'est-ce que l'IoT (Internet des Objets) dans le contexte de l'électronique embarquée ?",
-    options: ["Un protocole réseau haute vitesse", "Des objets physiques équipés de capteurs connectés à Internet", "Une norme de sécurité informatique", "Un logiciel de gestion de réseau"],
-    correct: 1, points: 3
-  },
-  // ── PÔLE 2 – Réseaux ─────────────────────────────────────
-  {
-    pole: 'net', poleLabel: '🌐 Réseaux',
-    text: "Quelle est la différence entre un switch et un routeur ?",
+    text: "Sur un schéma home-cinéma, tu vois 'HDMI ARC'. À quoi sert cette fonctionnalité ?",
     options: [
-      "Aucune différence, ce sont des synonymes",
-      "Un switch connecte des appareils dans un même réseau local, un routeur connecte plusieurs réseaux entre eux",
-      "Un routeur est plus lent qu'un switch",
-      "Un switch est utilisé uniquement pour le Wi-Fi"
+      "Augmenter la résolution de l'image",
+      "Renvoyer l'audio du TV vers l'ampli via le même câble HDMI",
+      "Connecter deux appareils en Bluetooth",
+      "Alimenter électriquement un périphérique"
     ],
     correct: 1, points: 3
   },
   {
-    pole: 'net', poleLabel: '🌐 Réseaux',
-    text: "À quoi sert une adresse IP ?",
-    options: ["À identifier un utilisateur par son nom", "À identifier de manière unique un équipement sur un réseau", "À stocker des données sur le disque dur", "À mesurer la vitesse d'une connexion"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'net', poleLabel: '🌐 Réseaux',
-    text: "Qu'est-ce qu'un VPN ?",
-    options: ["Un type d'antivirus", "Un tunnel sécurisé qui chiffre les communications sur Internet", "Un serveur de stockage en ligne", "Un protocole d'impression réseau"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'net', poleLabel: '🌐 Réseaux',
-    text: "Tu configures un pare-feu. Quelle règle permets l'accès HTTPS entrant ?",
-    options: ["Autoriser le port 21 en entrant", "Autoriser le port 443 TCP en entrant", "Bloquer tous les ports", "Autoriser le port 25 SMTP"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'net', poleLabel: '🌐 Réseaux',
-    text: "Qu'est-ce que la virtualisation dans un contexte réseau ?",
-    options: ["Rendre le réseau invisible physiquement", "Faire fonctionner plusieurs systèmes d'exploitation sur une même machine physique", "Connecter deux réseaux sans fil", "Sauvegarder la configuration d'un switch"],
-    correct: 1, points: 3
-  },
-  // ── PÔLE 3 – Cybersécurité & Data ────────────────────────
-  {
-    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
-    text: "Qu'est-ce qu'un hash (empreinte) en cryptographie ?",
-    options: ["Un type de mot de passe simple", "Une fonction qui transforme des données en une chaîne de longueur fixe non réversible", "Un algorithme de compression de fichiers", "Un protocole de communication sécurisé"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
-    text: "Qu'est-ce qu'une attaque par phishing ?",
-    options: ["Une attaque physique sur les serveurs", "Une tentative de tromper un utilisateur pour voler ses identifiants via un faux site ou email", "Un virus qui efface les disques durs", "Une surcharge du réseau par paquets"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
-    text: "En Python, que fait la commande : `import socket; s = socket.socket()` ?",
-    options: ["Importe un module de calcul mathématique", "Crée un objet permettant d'établir des connexions réseau bas niveau", "Ouvre un fichier texte", "Génère un nombre aléatoire"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
-    text: "Qu'est-ce qu'une injection SQL ?",
-    options: ["Une mise à jour automatique de base de données", "Une attaque qui insère du code malveillant dans une requête SQL pour manipuler la base de données", "Un type de sauvegarde incrémentale", "Un protocole de transfert de fichiers"],
-    correct: 1, points: 3
-  },
-  {
-    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
-    text: "Quel outil est couramment utilisé pour analyser le trafic réseau en temps réel ?",
-    options: ["Microsoft Excel", "Wireshark", "Photoshop", "LibreOffice"],
-    correct: 1, points: 3
-  },
-  // ── GÉNÉRAL / Polyvalent ─────────────────────────────────
-  {
-    pole: 'gen', poleLabel: '⚙️ Général',
-    text: "Qu'est-ce que le protocole SSH (Secure Shell) ?",
-    options: ["Un protocole graphique pour bureau à distance", "Un protocole sécurisé d'accès distant en ligne de commande", "Un format de fichier compressé", "Un langage de programmation"],
-    correct: 1, points: 2
-  },
-  {
-    pole: 'gen', poleLabel: '⚙️ Général',
-    text: "Parmi ces activités, laquelle t'attire le plus ?",
+    pole: 'elec', poleLabel: '🔌 Électronique',
+    text: "Dans une installation DMX 512, à quoi sert la résistance de terminaison (120Ω) en bout de chaîne ?",
     options: [
-      "Souder des composants et concevoir des circuits électroniques",
-      "Configurer des serveurs et gérer une infrastructure réseau",
-      "Analyser des journaux de sécurité et écrire des scripts Python",
-      "Toutes ces activités m'intéressent"
+      "Limiter la consommation électrique",
+      "Éviter les réflexions de signal sur le câble RS485 qui causeraient des dysfonctionnements",
+      "Régler la couleur des projecteurs",
+      "Protéger la table de mixage"
     ],
-    correct: 3, points: 1
+    correct: 1, points: 3
   },
   {
+    pole: 'elec', poleLabel: '🔌 Électronique',
+    text: "Un lave-linge ne chauffe plus mais tourne normalement. Quelle est ta première vérification logique ?",
+    options: [
+      "Remplacer directement le moteur",
+      "Mesurer la résistance de la résistance chauffante au multimètre",
+      "Reformater le programmateur",
+      "Appeler le constructeur sans rien faire"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'elec', poleLabel: '🔌 Électronique',
+    text: "Quel instrument te permet de visualiser la forme d'un signal électrique (tension en fonction du temps) ?",
+    options: ["Un multimètre numérique", "Un oscilloscope", "Un ohmmètre seul", "Un ampèremètre"],
+    correct: 1, points: 3
+  },
+  // ── PÔLE RÉSEAUX & INFO ────────────────────────────────
+  {
+    pole: 'net', poleLabel: '🌐 Réseaux & Info',
+    text: "Tu installes Linux sur un PC. Lors du partitionnement, à quoi sert la partition swap ?",
+    options: [
+      "Stocker les documents personnels",
+      "Servir de mémoire virtuelle quand la RAM est insuffisante",
+      "Héberger le système d'exploitation",
+      "Sauvegarder les mises à jour"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'net', poleLabel: '🌐 Réseaux & Info',
+    text: "En HTML, que fait la balise <link rel=stylesheet href=style.css> ?",
+    options: [
+      "Elle crée un lien hypertexte vers une autre page",
+      "Elle associe une feuille de style CSS externe à la page HTML",
+      "Elle insère une image dans la page",
+      "Elle définit le titre de l'onglet"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'net', poleLabel: '🌐 Réseaux & Info',
+    text: "En Python, que fait : for i in range(1, 255): print(f'192.168.1.{i}') ?",
+    options: [
+      "Elle efface toutes les adresses IP du réseau",
+      "Elle affiche toutes les IPs de 192.168.1.1 à 192.168.1.254",
+      "Elle configure une IP statique",
+      "Elle installe un serveur DHCP"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'net', poleLabel: '🌐 Réseaux & Info',
+    text: "Quelles sont les 4 étapes du protocole DHCP quand un PC demande une adresse IP ?",
+    options: [
+      "Ping → Réponse → Connexion → Déconnexion",
+      "DISCOVER → OFFER → REQUEST → ACK",
+      "SYN → SYN-ACK → ACK → FIN",
+      "GET → POST → PUT → DELETE"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'net', poleLabel: '🌐 Réseaux & Info',
+    text: "Dans VirtualBox, le mode 'réseau interne' signifie que la VM :",
+    options: [
+      "Accède à Internet normalement",
+      "Ne peut communiquer qu'avec les autres VMs du même réseau, isolée d'Internet",
+      "Est désactivée",
+      "Utilise l'adresse IP de la machine physique"
+    ],
+    correct: 1, points: 3
+  },
+  // ── PÔLE CYBER ─────────────────────────────────────────
+  {
+    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
+    text: "Parmi ces mots de passe, lequel est le plus sécurisé ?",
+    options: ["password123", "Lycee2026", "Xk#9mP!qL2@vN8", "abcdefgh"],
+    correct: 2, points: 3
+  },
+  {
+    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
+    text: "À quoi sert un gestionnaire de mots de passe comme KeePass ?",
+    options: [
+      "Accélérer la connexion Internet",
+      "Stocker de façon chiffrée tous ses mots de passe dans une base sécurisée",
+      "Analyser les virus sur un PC",
+      "Configurer le pare-feu Windows"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
+    text: "PC très lent, pop-ups intempestifs, navigateur redirigé vers des sites inconnus. De quoi s'agit-il probablement ?",
+    options: [
+      "Un problème de RAM défectueuse",
+      "Une infection par un malware (adware ou spyware)",
+      "Une mise à jour Windows en cours",
+      "Un problème de réseau"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
+    text: "Qu'est-ce qu'un ransomware ?",
+    options: [
+      "Un antivirus gratuit",
+      "Un malware qui chiffre tes fichiers et réclame une rançon pour les récupérer",
+      "Un outil de sauvegarde automatique",
+      "Un type de pare-feu réseau"
+    ],
+    correct: 1, points: 3
+  },
+  {
+    pole: 'cyber', poleLabel: '🛡️ Cybersécurité',
+    text: "Selon le RGPD, en cas de violation de données personnelles, l'entreprise doit notifier la CNIL sous quel délai ?",
+    options: ["24 heures", "72 heures", "1 semaine", "1 mois"],
+    correct: 1, points: 3
+  },
+  // ── GÉNÉRAL ────────────────────────────────────────────
+  {
     pole: 'gen', poleLabel: '⚙️ Général',
-    text: "Dans le cadre du Bac Pro CIEL, combien de semaines de stage (PFMP) dois-tu réaliser sur 3 ans ?",
+    text: "Dans le Bac Pro CIEL, combien de semaines de stages (PFMP) sur 3 ans ?",
     options: ["8 semaines", "15 semaines", "22 semaines", "30 semaines"],
     correct: 2, points: 2
   },
   {
     pole: 'gen', poleLabel: '⚙️ Général',
-    text: "Qu'est-ce que GNU/Linux dans un contexte professionnel IT ?",
-    options: ["Un éditeur de texte avancé", "Un système d'exploitation open-source très utilisé sur les serveurs et systèmes embarqués", "Un langage de script propriétaire Microsoft", "Un logiciel de virtualisation"],
-    correct: 1, points: 2
+    text: "Quelle activité t'attire le plus ?",
+    options: [
+      "Souder des circuits, configurer des lyres DMX, dépanner un lave-linge",
+      "Installer Linux, coder en Python et virtualiser des machines",
+      "Gérer les mots de passe, supprimer des virus, apprendre le RGPD",
+      "Tout ça m'intéresse de façon équilibrée"
+    ],
+    correct: 3, points: 1
   },
   {
     pole: 'gen', poleLabel: '⚙️ Général',
     text: "Après le Bac Pro CIEL, quelle poursuite d'études est la plus directe ?",
-    options: ["Licence 1 directement (sans BTS)", "BTS CIEL ou BTS SIO", "Master 2 en cybersécurité", "École d'ingénieur sur concours CPGE"],
+    options: ["Master 2 directement", "BTS CIEL ou BTS SIO (2 ans)", "Classe préparatoire CPGE", "Licence 1 généraliste"],
     correct: 1, points: 2
   },
+  {
+    pole: 'gen', poleLabel: '⚙️ Général',
+    text: "La commande Linux `apt install` sert à :",
+    options: [
+      "Supprimer un fichier",
+      "Installer un logiciel depuis les dépôts officiels",
+      "Configurer une adresse IP",
+      "Démarrer un serveur web"
+    ],
+    correct: 1, points: 2
+  },
+  {
+    pole: 'gen', poleLabel: '⚙️ Général',
+    text: "Qu'est-ce qui te correspond le mieux ?",
+    options: [
+      "J'aime les circuits physiques, le câblage et les appareils électroniques",
+      "Je préfère les réseaux, le code et les systèmes virtuels",
+      "La sécurité informatique et la protection des données me passionnent",
+      "Je n'ai pas encore de préférence marquée"
+    ],
+    correct: 3, points: 1
+  },
 ];
-
 const PROFILES = {
   elec: {
     title: "🔌 Profil Électronique",
