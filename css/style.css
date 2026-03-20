@@ -59,9 +59,9 @@ a:hover { color: var(--cyan-light); }
   font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
   padding: 2px 8px; border-radius: 4px; letter-spacing: 1px;
 }
-.nav__name { font-size: 1.8rem; font-weight: 800; color: var(--text); letter-spacing: 3px; }
+.nav__name { font-size: 2.2rem; font-weight: 800; color: var(--text); letter-spacing: 3px; }
 
-.nav__links { display: flex; align-items: center; gap: 4rem; list-style: none; }
+.nav__links { display: flex; align-items: center; gap: 6rem; list-style: none; }
 .nav__links a { font-size: 1.1rem; font-weight: 600; color: var(--text-muted); transition: color var(--transition); }
 .nav__links a:hover { color: var(--cyan); }
 
@@ -382,8 +382,8 @@ a:hover { color: var(--cyan-light); }
 /* ── PROJET FINAL CARD ───────────────────────────────────── */
 .projet-final-card {
   background: linear-gradient(135deg, var(--surface) 0%, rgba(45,147,108,0.15) 100%);
-  border: 2px solid var(--green); border-radius: 16px;
-  padding: 2.5rem; margin-top: 3rem; position: relative; overflow: hidden;
+  border: 2px solid var(--green); border-radius: 20px;
+  padding: 3.5rem; margin-top: 3rem; position: relative; overflow: hidden;
 }
 .projet-final-card::after {
   content: '🏆';
@@ -391,21 +391,21 @@ a:hover { color: var(--cyan-light); }
   font-size: 3rem; opacity: 0.3;
 }
 .projet-final-card__tag {
-  display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+  display: inline-block; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700;
   color: var(--green); background: rgba(45,147,108,0.15); border: 1px solid rgba(45,147,108,0.4);
-  padding: 4px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 1rem;
+  padding: 6px 16px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 1.5rem;
 }
-.projet-final-card__title { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.75rem; }
-.projet-final-card__text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
-.projet-final-card__steps { display: flex; flex-direction: column; gap: 0.75rem; }
-.step { display: flex; align-items: flex-start; gap: 1rem; }
+.projet-final-card__title { font-size: 2rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; }
+.projet-final-card__text { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+.projet-final-card__steps { display: flex; flex-direction: column; gap: 1.25rem; }
+.step { display: flex; align-items: flex-start; gap: 1.5rem; }
 .step__num {
   display: flex; align-items: center; justify-content: center;
-  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
   background: var(--green); color: #fff;
-  font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
+  font-family: var(--font-mono); font-size: 1rem; font-weight: 700;
 }
-.step__text { font-size: 0.9rem; color: var(--text-muted); padding-top: 4px; }
+.step__text { font-size: 1.1rem; color: var(--text-muted); padding-top: 8px; }
 
 /* ── SCHEMA CABLAGE ──────────────────────────────────────── */
 .schema-wrap {
@@ -436,7 +436,7 @@ a:hover { color: var(--cyan-light); }
 .breadcrumb__sep { color: var(--border); }
 
 /* ── TWO COL LAYOUT ──────────────────────────────────────── */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
 
 /* ── RESPONSIVE TABLE ────────────────────────────────────── */
