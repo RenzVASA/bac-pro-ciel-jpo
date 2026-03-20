@@ -58,7 +58,7 @@ a:hover { color: var(--cyan-light); }
 }
 .nav__name { font-size: 2.2rem; font-weight: 800; color: var(--text); letter-spacing: 3px; }
 
-.nav__links { display: flex; align-items: center; gap: 5rem; list-style: none; }
+.nav__links { display: flex; align-items: center; gap: 5rem; list-style: none; flex: 1; justify-content: center; }
 .nav__links a { font-size: 1.15rem; font-weight: 600; color: var(--text-muted); transition: color var(--transition); white-space: nowrap; }
 .nav__links a:hover { color: var(--cyan); }
 
