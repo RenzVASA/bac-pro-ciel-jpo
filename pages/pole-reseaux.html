@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pôle Réseaux & Informatique – Bac Pro CIEL</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <a href="../index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none">
+        <span class="nav__badge">BAC PRO</span><span class="nav__name">CIEL</span>
+      </a>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="pole-electronique.html">🔌 Électronique</a></li>
+      <li><a href="pole-cyber.html">🛡️ Cyber</a></li>
+      <li><a href="quiz.html" class="nav__cta">Quiz →</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>Pôle Réseaux & Informatique</span>
+      </div>
+      <span class="page-hero__tag page-hero__tag--net">Pôle 2 – Réseaux & Informatique</span>
+      <h1 class="page-hero__title">🌐 Réseaux & Informatique</h1>
+      <p class="page-hero__sub">Installe des OS, code en HTML/CSS/Python, configure des réseaux DHCP et virtualise des machines. L'infrastructure numérique de A à Z.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- OS & SYSTEMES -->
+      <div class="section__header" style="text-align:left;margin-bottom:2rem">
+        <span class="section__tag" style="color:var(--cyan)">Systèmes d'exploitation</span>
+        <h2 class="section__title" style="font-size:1.8rem">💿 Installation & Configuration d'OS</h2>
+      </div>
+      <div class="info-banner">
+        <span class="info-banner__icon">🖥️</span>
+        <p class="info-banner__text">Tu apprends à <strong>installer et configurer des systèmes d'exploitation</strong> professionnels sur des machines physiques et virtuelles : partitionnement, pilotes, paramètres réseau, gestion des comptes utilisateurs.</p>
+      </div>
+      <div class="activity-grid" style="margin-bottom:3.5rem">
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">01 · OS</div>
+          <div class="activity-card__icon">🐧</div>
+          <h3 class="activity-card__title">Linux (Debian/Ubuntu)</h3>
+          <p class="activity-card__text">Installation depuis ISO, partitionnement (/, /home, swap), configuration réseau en ligne de commande, gestion des paquets (apt), droits utilisateurs et groupes.</p>
+          <div class="activity-card__tools"><span>Debian</span><span>Ubuntu Server</span><span>Terminal bash</span><span>apt / dpkg</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">02 · OS</div>
+          <div class="activity-card__icon">🪟</div>
+          <h3 class="activity-card__title">Windows (10/11/Server)</h3>
+          <p class="activity-card__text">Installation propre, configuration du réseau, gestion des comptes et des droits NTFS, rejoindre un domaine Active Directory, PowerShell de base.</p>
+          <div class="activity-card__tools"><span>Windows 11</span><span>Windows Server</span><span>Active Directory</span><span>PowerShell</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__num">03 · CONFIG</div>
+          <div class="activity-card__icon">⚙️</div>
+          <h3 class="activity-card__title">Configuration système</h3>
+          <p class="activity-card__text">Paramétrages post-installation : mises à jour, configuration du pare-feu, activation des services (SSH, partage de fichiers), journaux système.</p>
+          <div class="activity-card__tools"><span>SSH</span><span>Samba</span><span>Journaux (logs)</span><span>Firewall</span></div>
+        </div>
+      </div>
+
+      <!-- CODE -->
+      <div class="section__header" style="text-align:left;margin-bottom:2rem">
+        <span class="section__tag" style="color:#4d96ff">Développement</span>
+        <h2 class="section__title" style="font-size:1.8rem">💻 Code : HTML, CSS & Python</h2>
+      </div>
+      <!-- Code example blocks -->
+      <div class="two-col" style="margin-bottom:1.5rem">
+        <div class="schema-wrap">
+          <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-bottom:.75rem">EXEMPLE – Page HTML de base</p>
+          <pre style="font-family:var(--font-mono);font-size:.78rem;color:#e0e0e0;line-height:1.7;overflow-x:auto"><span style="color:#c084fc">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#00b4d8">&lt;html</span> <span style="color:#ffd93d">lang=</span><span style="color:#6bcb77">"fr"</span><span style="color:#00b4d8">&gt;</span>
+<span style="color:#00b4d8">&lt;head&gt;</span>
+  <span style="color:#00b4d8">&lt;title&gt;</span>Mon site CIEL<span style="color:#00b4d8">&lt;/title&gt;</span>
+  <span style="color:#00b4d8">&lt;link</span> <span style="color:#ffd93d">rel=</span><span style="color:#6bcb77">"stylesheet"</span>
+        <span style="color:#ffd93d">href=</span><span style="color:#6bcb77">"style.css"</span><span style="color:#00b4d8">/&gt;</span>
+<span style="color:#00b4d8">&lt;/head&gt;</span>
+<span style="color:#00b4d8">&lt;body&gt;</span>
+  <span style="color:#00b4d8">&lt;h1&gt;</span>Bonjour, monde !<span style="color:#00b4d8">&lt;/h1&gt;</span>
+  <span style="color:#00b4d8">&lt;p&gt;</span>Mon premier site web.<span style="color:#00b4d8">&lt;/p&gt;</span>
+<span style="color:#00b4d8">&lt;/body&gt;&lt;/html&gt;</span></pre>
+        </div>
+        <div class="schema-wrap">
+          <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-bottom:.75rem">EXEMPLE – Script Python réseau</p>
+          <pre style="font-family:var(--font-mono);font-size:.78rem;color:#e0e0e0;line-height:1.7;overflow-x:auto"><span style="color:#c084fc">import</span> socket
+<span style="color:#c084fc">import</span> os
+
+<span style="color:#8aaccf"># Scanner un réseau local</span>
+<span style="color:#ffd93d">def</span> <span style="color:#6bcb77">ping_host</span>(ip):
+    result = os.system(
+        <span style="color:#6bcb77">f"ping -c 1 -W 1 {ip}"</span>
+    )
+    <span style="color:#c084fc">return</span> result == <span style="color:#f77f00">0</span>
+
+<span style="color:#ffd93d">for</span> i <span style="color:#c084fc">in</span> range(<span style="color:#f77f00">1</span>, <span style="color:#f77f00">10</span>):
+    ip = <span style="color:#6bcb77">f"192.168.1.{i}"</span>
+    <span style="color:#ffd93d">if</span> ping_host(ip):
+        <span style="color:#ffd93d">print</span>(<span style="color:#6bcb77">f"✓ {ip} actif"</span>)</pre>
+        </div>
+      </div>
+      <div class="activity-grid" style="margin-bottom:3.5rem">
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">🌐</div>
+          <h3 class="activity-card__title">HTML & CSS</h3>
+          <p class="activity-card__text">Créer des pages web structurées (HTML5) et les mettre en forme (CSS3). Balises sémantiques, mise en page flexbox/grid, responsive design pour mobile.</p>
+          <div class="activity-card__tools"><span>HTML5</span><span>CSS3</span><span>Flexbox</span><span>Grid</span><span>VS Code</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">🐍</div>
+          <h3 class="activity-card__title">Python</h3>
+          <p class="activity-card__text">Écrire des scripts pour automatiser des tâches, interagir avec le réseau (sockets), lire/écrire des fichiers, traiter des données. Python est le langage de l'automatisation et de la cybersécurité.</p>
+          <div class="activity-card__tools"><span>Python 3</span><span>Scripts</span><span>Bibliothèques</span><span>IDLE/VSCode</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">📁</div>
+          <h3 class="activity-card__title">Gestion de versions</h3>
+          <p class="activity-card__text">Versionner son code avec Git, travailler en équipe sur un projet (branches, pull requests), héberger ses projets sur GitHub ou GitLab.</p>
+          <div class="activity-card__tools"><span>Git</span><span>GitHub</span><span>Commit</span><span>Branches</span></div>
+        </div>
+      </div>
+
+      <!-- DHCP / IP -->
+      <div class="section__header" style="text-align:left;margin-bottom:2rem">
+        <span class="section__tag" style="color:var(--cyan)">Protocoles réseau</span>
+        <h2 class="section__title" style="font-size:1.8rem">📡 DHCP, Adressage IP & Protocoles</h2>
+      </div>
+      <!-- Schema reseau SVG -->
+      <div class="schema-wrap" style="margin-bottom:1.5rem">
+        <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--text-muted);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)">SCHÉMA – Fonctionnement DHCP dans un réseau local</p>
+        <svg viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;width:100%">
+          <rect width="780" height="220" fill="#071220" rx="8"/>
+          <!-- Serveur DHCP -->
+          <rect x="20" y="70" width="120" height="80" rx="8" fill="#1a3a6b" stroke="#2d936c" stroke-width="2"/>
+          <text x="80" y="100" text-anchor="middle" fill="#2d936c" font-family="Syne,sans-serif" font-size="11" font-weight="700">SERVEUR</text>
+          <text x="80" y="116" text-anchor="middle" fill="#2d936c" font-family="Syne,sans-serif" font-size="11" font-weight="700">DHCP</text>
+          <text x="80" y="133" text-anchor="middle" fill="#8aaccf" font-family="Syne,sans-serif" font-size="9">192.168.1.1</text>
+          <text x="80" y="145" text-anchor="middle" fill="#8aaccf" font-family="Syne,sans-serif" font-size="8">Pool: .100-.200</text>
+          <!-- Switch -->
+          <rect x="310" y="90" width="120" height="40" rx="6" fill="#132640" stroke="#00b4d8" stroke-width="1.5"/>
+          <text x="370" y="110" text-anchor="middle" fill="#00b4d8" font-family="Syne,sans-serif" font-size="11" font-weight="700">SWITCH</text>
+          <text x="370" y="124" text-anchor="middle" fill="#8aaccf" font-family="Syne,sans-serif" font-size="9">24 ports</text>
+          <!-- Clients -->
+          <rect x="590" y="30" width="110" height="50" rx="6" fill="#1a3a6b" stroke="#00b4d8" stroke-width="1.5"/>
+          <text x="645" y="52" text-anchor="middle" fill="#00b4d8" font-family="Syne,sans-serif" font-size="10" font-weight="700">PC Client 1</text>
+          <text x="645" y="67" text-anchor="middle" fill="#6bcb77" font-family="Syne,sans-serif" font-size="9">192.168.1.100</text>
+          <rect x="590" y="95" width="110" height="50" rx="6" fill="#1a3a6b" stroke="#00b4d8" stroke-width="1.5"/>
+          <text x="645" y="117" text-anchor="middle" fill="#00b4d8" font-family="Syne,sans-serif" font-size="10" font-weight="700">PC Client 2</text>
+          <text x="645" y="132" text-anchor="middle" fill="#6bcb77" font-family="Syne,sans-serif" font-size="9">192.168.1.101</text>
+          <rect x="590" y="160" width="110" height="50" rx="6" fill="#1a3a6b" stroke="#f77f00" stroke-width="1.5"/>
+          <text x="645" y="182" text-anchor="middle" fill="#f77f00" font-family="Syne,sans-serif" font-size="10" font-weight="700">Nouveau PC</text>
+          <text x="645" y="197" text-anchor="middle" fill="#ffd93d" font-family="Syne,sans-serif" font-size="9">DHCP Discover…</text>
+          <!-- Lines -->
+          <line x1="140" y1="110" x2="310" y2="110" stroke="#2d936c" stroke-width="1.5"/>
+          <line x1="430" y1="100" x2="590" y2="55" stroke="#00b4d8" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="430" y1="110" x2="590" y2="120" stroke="#00b4d8" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="430" y1="120" x2="590" y2="185" stroke="#f77f00" stroke-width="2" stroke-dasharray="3,2"/>
+          <!-- DHCP steps -->
+          <text x="460" y="180" text-anchor="middle" fill="#f77f00" font-family="Space Mono,monospace" font-size="8">1. DISCOVER (broadcast)</text>
+          <text x="390" y="155" text-anchor="middle" fill="#ffd93d" font-family="Space Mono,monospace" font-size="8">2. OFFER (.102)</text>
+          <text x="390" y="167" text-anchor="middle" fill="#6bcb77" font-family="Space Mono,monospace" font-size="8">3. REQUEST → 4. ACK</text>
+          <text x="390" y="200" text-anchor="middle" fill="#4a6a8a" font-family="Syne,sans-serif" font-size="9">Masque: 255.255.255.0 · Passerelle: 192.168.1.1 · DNS: 8.8.8.8</text>
+        </svg>
+      </div>
+      <div class="activity-grid" style="margin-bottom:3.5rem">
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">🏠</div>
+          <h3 class="activity-card__title">Adressage IP & Sous-réseaux</h3>
+          <p class="activity-card__text">Comprendre l'adressage IPv4 (classes, masques, CIDR), calculer des plages d'adresses, définir les sous-réseaux pour une organisation.</p>
+          <div class="activity-card__tools"><span>IPv4/IPv6</span><span>CIDR</span><span>Masque</span><span>Calculateur IP</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">📦</div>
+          <h3 class="activity-card__title">DHCP – Attribution automatique</h3>
+          <p class="activity-card__text">Installer et configurer un serveur DHCP (sur Linux ou Windows Server), définir un pool d'adresses, des baux, des réservations MAC. Comprendre les 4 étapes Discover/Offer/Request/ACK.</p>
+          <div class="activity-card__tools"><span>DHCP Server</span><span>Plage IP</span><span>Bail DHCP</span><span>Réservation</span></div>
+        </div>
+        <div class="activity-card activity-card--net">
+          <div class="activity-card__icon">🔗</div>
+          <h3 class="activity-card__title">Protocoles TCP/IP</h3>
+          <p class="activity-card__text">Comprendre la pile TCP/IP (modèle OSI vs TCP/IP), les protocoles courants : HTTP/HTTPS, DNS, FTP, SSH, SMTP. Analyser le trafic avec Wireshark.</p>
+          <div class="activity-card__tools"><span>TCP/IP</span><span>DNS</span><span>HTTP/HTTPS</span><span>Wireshark</span></div>
+        </div>
+      </div>
+
+      <!-- VIRTUALISATION -->
+      <div class="section__header" style="text-align:left;margin-bottom:2rem">
+        <span class="section__tag" style="color:var(--purple)">Virtualisation</span>
+        <h2 class="section__title" style="font-size:1.8rem">🖥️ Virtualisation</h2>
+      </div>
+      <div class="info-banner" style="border-color:rgba(192,132,252,.3);background:rgba(192,132,252,.06)">
+        <span class="info-banner__icon">📦</span>
+        <p class="info-banner__text">La virtualisation te permet de faire tourner <strong>plusieurs systèmes d'exploitation simultanément</strong> sur une seule machine physique. Indispensable en entreprise pour les tests, le déploiement et la sauvegarde.</p>
+      </div>
+      <div class="activity-grid" style="margin-bottom:3.5rem">
+        <div class="activity-card activity-card--net" style="border-top-color:var(--purple)">
+          <div class="activity-card__icon">📦</div>
+          <h3 class="activity-card__title">VirtualBox / VMware</h3>
+          <p class="activity-card__text">Créer et configurer des machines virtuelles, allouer ressources CPU/RAM/stockage, configurer les interfaces réseau (NAT, pont, réseau interne), prendre des snapshots.</p>
+          <div class="activity-card__tools"><span>VirtualBox</span><span>VMware</span><span>Snapshots</span><span>ISO</span></div>
+        </div>
+        <div class="activity-card activity-card--net" style="border-top-color:var(--purple)">
+          <div class="activity-card__icon">🌍</div>
+          <h3 class="activity-card__title">Réseau virtuel</h3>
+          <p class="activity-card__text">Construire des architectures réseau virtuelles : plusieurs VMs communicant entre elles, simulation d'une infrastructure client/serveur, tests de services réseau en isolation.</p>
+          <div class="activity-card__tools"><span>NAT</span><span>Bridge</span><span>Host-Only</span><span>Internal Network</span></div>
+        </div>
+        <div class="activity-card activity-card--net" style="border-top-color:var(--purple)">
+          <div class="activity-card__icon">☁️</div>
+          <h3 class="activity-card__title">Intérêt professionnel</h3>
+          <p class="activity-card__text">En entreprise : serveurs virtualisés pour réduire les coûts, déploiement rapide de nouveaux services, isolation des environnements de production et de test.</p>
+          <div class="activity-card__tools"><span>Hyper-V</span><span>ESXi</span><span>Cloud computing</span></div>
+        </div>
+      </div>
+
+      <!-- PROJET FINAL -->
+      <div class="projet-final-card" style="background:linear-gradient(135deg,var(--surface) 0%,rgba(0,180,216,.15) 100%);border-color:var(--cyan)">
+        <span class="projet-final-card__tag" style="color:var(--cyan);background:rgba(0,180,216,.1);border-color:rgba(0,180,216,.3)">PROJET FINAL INFORMATIQUE</span>
+        <h3 class="projet-final-card__title">🏆 Ton projet de fin d'année</h3>
+        <p class="projet-final-card__text">En terminale, tu développes une solution numérique complète (site web, script Python, ou infrastructure réseau) et tu la défends devant un jury professionnel.</p>
+        <div class="projet-final-card__steps">
+          <div class="step"><div class="step__num" style="background:var(--cyan)">1</div><p class="step__text">Analyse du besoin et maquettage (wireframes)</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">2</div><p class="step__text">Développement et codage (HTML/CSS/Python)</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">3</div><p class="step__text">Tests fonctionnels et correction des bugs</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">4</div><p class="step__text">Rédaction de la documentation technique</p></div>
+          <div class="step"><div class="step__num" style="background:var(--cyan)">5</div><p class="step__text">Soutenance orale de 20 min devant jury</p></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem">
+        <a href="quiz.html" class="btn btn--primary">Faire le quiz d'orientation →</a>
+        <a href="pole-cyber.html" class="btn btn--ghost">Voir le pôle Cyber →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem"><span class="nav__badge">BAC PRO</span><span class="nav__name">CIEL</span></div>
+          <p>Cybersécurité · Informatique et réseaux · Électronique</p>
+        </div>
+        <div class="footer__links">
+          <h4>Les pôles</h4>
+          <ul>
+            <li><a href="pole-electronique.html">🔌 Électronique</a></li>
+            <li><a href="pole-reseaux.html">🌐 Réseaux &amp; Info</a></li>
+            <li><a href="pole-cyber.html">🛡️ Cybersécurité</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Orientation</h4>
+          <ul>
+            <li><a href="quiz.html">Quiz d'orientation</a></li>
+            <li><a href="../index.html">Retour accueil</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 – Journées Portes Ouvertes – Bac Pro CIEL</p></div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

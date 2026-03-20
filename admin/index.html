@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Admin – Bac Pro CIEL</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/admin.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__logo">
+      <a href="../index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none">
+        <span class="nav__badge">BAC PRO</span>
+        <span class="nav__name">CIEL</span>
+      </a>
+    </div>
+    <div class="nav__admin-badge">🔒 Espace Administrateur</div>
+  </nav>
+
+  <!-- LOGIN SCREEN -->
+  <div class="admin-login" id="admin-login">
+    <div class="login-card">
+      <div class="login-icon">🔐</div>
+      <h2 class="login-title">Accès Administrateur</h2>
+      <p class="login-sub">Espace réservé à l'équipe pédagogique</p>
+      <div class="login-form">
+        <input type="password" class="login-input" id="admin-pwd" placeholder="Mot de passe…" autocomplete="current-password"/>
+        <button class="btn btn--primary" id="btn-login">Connexion</button>
+        <p class="login-error" id="login-error"></p>
+      </div>
+      <p class="login-note">Pour obtenir l'accès, contacter le responsable du projet CIEL.</p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <main class="admin-main" id="admin-main" style="display:none">
+    <div class="admin-container">
+      <div class="admin-header">
+        <div>
+          <h1 class="admin-title">Dashboard JPO – Bac Pro CIEL</h1>
+          <p class="admin-sub">Résultats des visiteurs en temps réel</p>
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn--ghost btn--sm" id="btn-refresh">🔄 Actualiser</button>
+          <button class="btn btn--ghost btn--sm" id="btn-export">⬇️ Export CSV</button>
+          <button class="btn btn--ghost btn--sm" id="btn-logout">Déconnexion</button>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="kpi-grid" id="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon">👥</div>
+          <div class="kpi-value" id="kpi-total">—</div>
+          <div class="kpi-label">Participants</div>
+        </div>
+        <div class="kpi-card kpi-card--cyan">
+          <div class="kpi-icon">📊</div>
+          <div class="kpi-value" id="kpi-avg-score">—</div>
+          <div class="kpi-label">Score moyen</div>
+        </div>
+        <div class="kpi-card kpi-card--green">
+          <div class="kpi-icon">🏆</div>
+          <div class="kpi-value" id="kpi-top-profile">—</div>
+          <div class="kpi-label">Profil dominant</div>
+        </div>
+        <div class="kpi-card kpi-card--orange">
+          <div class="kpi-icon">⏱️</div>
+          <div class="kpi-value" id="kpi-today">—</div>
+          <div class="kpi-label">Aujourd'hui</div>
+        </div>
+      </div>
+
+      <!-- CHARTS GRID -->
+      <div class="charts-grid">
+        <div class="chart-card chart-card--wide">
+          <h3 class="chart-card__title">📈 Répartition des profils dominants</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-profiles"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3 class="chart-card__title">🎯 Scores par pôle (moyennes)</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-poles"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3 class="chart-card__title">📅 Participations dans le temps</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-timeline"></canvas>
+          </div>
+        </div>
+        <div class="chart-card chart-card--wide">
+          <h3 class="chart-card__title">📋 Distribution des scores globaux</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-distribution"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- RAW TABLE -->
+      <div class="chart-card">
+        <div class="table-header">
+          <h3 class="chart-card__title">📝 Sessions récentes</h3>
+          <span class="table-badge" id="table-count">0 entrées</span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="data-table">
+            <thead>
+              <tr>
+                <th>Session ID</th>
+                <th>Date</th>
+                <th>Profil</th>
+                <th>Score</th>
+                <th>% Électronique</th>
+                <th>% Réseaux</th>
+                <th>% Cyber</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr><td colspan="7" class="table-empty">Chargement…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="admin-footer-note">Données anonymisées · Hébergées sur Firebase · Conformité RGPD</p>
+    </div>
+  </main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getDatabase, ref, onValue, get } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+  // Config Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCDlUls7vQUiL1OzF3Y-ZJklrd-hOjrp8w",
+    authDomain: "ciel-jpo-2026.firebaseapp.com",
+    databaseURL: "https://ciel-jpo-2026-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "ciel-jpo-2026",
+    storageBucket: "ciel-jpo-2026.firebasestorage.app",
+    messagingSenderId: "171327602979",
+    appId: "1:171327602979:web:24d66869c3e5a1b9928c96"
+  };
+
+  // Initialisation Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // Rendre Firebase accessible pour admin.js
+  window._adminFirebase = { db, ref, onValue, get };
+  console.log('[Admin Firebase] Connecté ✓');
+</script>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>
