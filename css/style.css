@@ -1,6 +1,6 @@
 /* ============================================================
-   BAC PRO CIEL – Journées Portes Ouvertes
-   Style principal – Design "Tech Terminal"
+   BAC PRO CIEL â€“ JournÃ©es Portes Ouvertes
+   Style principal â€“ Design "Tech Terminal"
    ============================================================ */
 
 :root {
@@ -40,7 +40,7 @@ body {
 a { color: var(--cyan); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--cyan-light); }
 
-/* ── NAV ─────────────────────────────────────────────────── */
+/* â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -74,7 +74,7 @@ a:hover { color: var(--cyan-light); }
 
 .nav__burger { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
-/* ── HERO ─────────────────────────────────────────────────── */
+/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero {
   min-height: 100vh;
   display: flex; align-items: center;
@@ -150,7 +150,7 @@ a:hover { color: var(--cyan-light); }
 .term-cursor { color: var(--cyan); animation: blink 1s infinite; }
 @keyframes blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
 
-/* ── BUTTONS ─────────────────────────────────────────────── */
+/* â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-display); font-weight: 700; font-size: 0.95rem;
@@ -164,11 +164,11 @@ a:hover { color: var(--cyan-light); }
 .btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); }
 .btn--xl { padding: 16px 32px; font-size: 1.05rem; }
 
-/* ── CONTAINER ───────────────────────────────────────────── */
+/* â”€â”€ CONTAINER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .container--narrow { max-width: 700px; }
 
-/* ── SECTIONS ────────────────────────────────────────────── */
+/* â”€â”€ SECTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section { padding: 100px 0; }
 .section--dark { background: var(--bg2); }
 .section--cta {
@@ -190,7 +190,7 @@ a:hover { color: var(--cyan-light); }
 .section__title--light { color: var(--text); }
 .section__sub { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto; }
 
-/* ── CARDS ───────────────────────────────────────────────── */
+/* â”€â”€ CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -206,7 +206,7 @@ a:hover { color: var(--cyan-light); }
 .card__title { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; }
 .card__text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
-/* ── ACCORDION ───────────────────────────────────────────── */
+/* â”€â”€ ACCORDION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .accordion-block {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden;
@@ -236,10 +236,10 @@ a:hover { color: var(--cyan-light); }
 .accordion__body.open { max-height: 600px; padding: 1rem 1.5rem 1.5rem; }
 .accordion__body ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
 .accordion__body li { padding-left: 1.5rem; position: relative; font-size: 0.92rem; color: var(--text-muted); }
-.accordion__body li::before { content: '▸'; position: absolute; left: 0; color: var(--cyan); }
+.accordion__body li::before { content: 'â–¸'; position: absolute; left: 0; color: var(--cyan); }
 .acc__competences { background: rgba(0,180,216,0.08); border-left: 3px solid var(--cyan); padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; font-size: 0.88rem; color: var(--text-muted); }
 
-/* ── POLES ───────────────────────────────────────────────── */
+/* â”€â”€ POLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .poles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
 .pole {
   background: var(--surface); border: 1px solid var(--border);
@@ -266,11 +266,11 @@ a:hover { color: var(--cyan-light); }
 .pole__metiers { font-size: 0.82rem; color: var(--text-muted); padding-top: 1rem; border-top: 1px solid var(--border); }
 .pole__metiers strong { color: var(--text); }
 
-/* ── FILIERE SVG ─────────────────────────────────────────── */
+/* â”€â”€ FILIERE SVG â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .filiere-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .filiere-svg { width: 100%; height: auto; display: block; }
 
-/* ── CTA BLOCK ───────────────────────────────────────────── */
+/* â”€â”€ CTA BLOCK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .cta-block {
   text-align: center;
   padding: 4rem 2rem;
@@ -281,7 +281,7 @@ a:hover { color: var(--cyan-light); }
 .cta-block .btn { margin-bottom: 1.25rem; }
 .cta-block__note { font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono); }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
+/* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .footer { background: #071220; border-top: 1px solid var(--border); padding: 3rem 0 1.5rem; }
 .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
 .footer__brand p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; }
@@ -294,244 +294,143 @@ a:hover { color: var(--cyan-light); }
 
 
 /* ============================================================
-   HERO CENTRÉ – sans terminal
+   OPTIMISÃ‰ Ã‰CRAN 65 POUCES â€” 1920px+
    ============================================================ */
 
-/* Hero : colonne unique centrée */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 120px 2rem 4rem;
-  position: relative;
-  overflow: hidden;
-  /* On retire le grid 2 colonnes */
-  grid-template-columns: unset;
-  max-width: unset;
-  margin: unset;
-  width: 100%;
-}
-
-.hero__center {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.hero__eyebrow { justify-content: center; }
-
-.hero__desc { max-width: 600px; margin-left: auto; margin-right: auto; }
-
-.hero__actions { justify-content: center; }
-
-.hero__stats { justify-content: center; }
-
-/* ============================================================
-   NAV – bien espacée sur tous les écrans
-   ============================================================ */
+/* Nav */
 .nav {
-  padding: 0 3rem;
+  height: 90px;
+  padding: 0 6rem;
 }
+.nav__badge { font-size: 0.9rem; padding: 4px 14px; }
+.nav__name { font-size: 2rem; letter-spacing: 4px; }
+.nav__links { gap: 5rem; margin: 0 3rem; }
+.nav__links a { font-size: 1.2rem; }
+.nav__cta { padding: 12px 30px; font-size: 1.15rem; border-radius: 8px; }
+.nav__burger { display: none; }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Container */
+.container { max-width: 1700px; padding: 0 6rem; }
+.container--narrow { max-width: 1000px; }
 
-/* Mobile (≤ 600px) */
-@media (max-width: 600px) {
-  .hero { padding: 100px 1.5rem 3rem; }
-  .hero__title-big { font-size: clamp(3.5rem, 18vw, 5.5rem); letter-spacing: -2px; }
-  .hero__actions { flex-direction: column; align-items: center; }
-  .hero__actions .btn { width: 100%; justify-content: center; }
-  .hero__stats { gap: 1rem; flex-wrap: wrap; }
-  .stat__sep { display: none; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .poles-grid { grid-template-columns: 1fr; }
-  .two-col { grid-template-columns: 1fr; }
-  .footer__grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .nav { padding: 0 1rem; }
-  .nav__links { display: none; }
-  .nav__burger { display: block; }
-  .nav__links.open {
-    display: flex; flex-direction: column;
-    position: absolute; top: 64px; left: 0; right: 0;
-    background: rgba(13,27,42,0.98);
-    padding: 1.5rem; border-bottom: 1px solid var(--border);
-    gap: 1rem; z-index: 99;
-  }
-  .section { padding: 60px 0; }
-  .container { padding: 0 1rem; }
-  .activity-grid { grid-template-columns: 1fr; }
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 200px 6rem 6rem;
+  min-height: 100vh;
 }
+.hero__title-big { font-size: 13rem; letter-spacing: -8px; line-height: 0.85; }
+.hero__title-main { font-size: 2.2rem; letter-spacing: 8px; }
+.hero__subtitle { font-size: 1.2rem; }
+.hero__desc { font-size: 1.4rem; max-width: 700px; line-height: 1.7; }
+.hero__actions { gap: 2rem; margin-bottom: 3rem; }
+.hero__stats { gap: 3rem; }
+.stat__num { font-size: 3rem; }
+.stat__label { font-size: 1rem; }
+.stat__sep { height: 60px; }
+.pill { font-size: 0.95rem; padding: 6px 18px; }
 
-/* Tablette (601px – 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-  .hero__title-big { font-size: clamp(5rem, 14vw, 8rem); }
-  .nav__links { display: none; }
-  .nav__burger { display: block; }
-  .nav__links.open {
-    display: flex; flex-direction: column;
-    position: absolute; top: 64px; left: 0; right: 0;
-    background: rgba(13,27,42,0.98);
-    padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
-    gap: 1.25rem; z-index: 99;
-  }
-  .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
-  .two-col { grid-template-columns: 1fr; }
-}
+/* Terminal */
+.terminal__bar { padding: 16px 20px; }
+.terminal__title { font-size: 1rem; }
+.dot { width: 16px; height: 16px; }
+.terminal__body { padding: 2rem; min-height: 300px; }
+.term-cmd { font-size: 1.15rem; }
+.term-prompt { font-size: 1.2rem; }
 
-/* Grand écran (≥ 1400px) — TV 43-55 pouces */
-@media (min-width: 1400px) {
-  :root { --container-max: 1400px; }
-  .container { max-width: 1400px; padding: 0 4rem; }
+/* Boutons */
+.btn { font-size: 1.3rem; padding: 20px 44px; min-height: 68px; border-radius: 12px; gap: 12px; }
+.btn--xl { font-size: 1.5rem; padding: 24px 56px; min-height: 80px; }
 
-  /* Nav bien aérée */
-  .nav { height: 80px; padding: 0 5rem; }
-  .nav__badge { font-size: 0.78rem; padding: 3px 12px; }
-  .nav__name { font-size: 1.7rem; }
-  .nav__links { gap: 3.5rem; }
-  .nav__links a { font-size: 1.05rem; }
-  .nav__cta { padding: 10px 24px; font-size: 1rem; }
+/* Sections */
+.section { padding: 150px 0; }
+.section__title { font-size: 4rem; }
+.section__sub { font-size: 1.3rem; max-width: 900px; }
+.section__tag { font-size: 0.9rem; letter-spacing: 3px; }
+.section__header { margin-bottom: 5rem; }
 
-  /* Hero centré grand */
-  .hero { padding: 140px 4rem 5rem; }
-  .hero__center { max-width: 1100px; }
-  .hero__title-big { font-size: clamp(8rem, 10vw, 12rem); }
-  .hero__title-main { font-size: 2rem; letter-spacing: 6px; }
-  .hero__subtitle { font-size: 1.1rem; }
-  .hero__desc { font-size: 1.25rem; max-width: 700px; }
-  .hero__actions { gap: 1.5rem; }
-  .hero__stats { gap: 2.5rem; }
-  .stat__num { font-size: 2.5rem; }
-  .stat__label { font-size: 0.9rem; }
-  .stat__sep { height: 50px; }
+/* Cards */
+.cards-grid { gap: 2.5rem; }
+.card { padding: 3rem; border-radius: 16px; }
+.card__icon { font-size: 3rem; margin-bottom: 1.5rem; }
+.card__title { font-size: 1.5rem; }
+.card__text { font-size: 1.1rem; line-height: 1.8; }
 
-  /* Boutons */
-  .btn { font-size: 1.1rem; padding: 15px 32px; min-height: 56px; border-radius: 10px; }
-  .btn--xl { font-size: 1.2rem; padding: 18px 40px; min-height: 64px; }
+/* PÃ´les */
+.poles-grid { gap: 2.5rem; }
+.pole { padding: 3rem; border-radius: 16px; }
+.pole__num { font-size: 4rem; }
+.pole__icon-wrap { font-size: 3rem; }
+.pole__title { font-size: 2rem; }
+.pole__desc { font-size: 1.1rem; line-height: 1.8; }
+.pole__tags span { font-size: 0.95rem; padding: 6px 18px; }
+.pole__metiers { font-size: 1rem; }
 
-  /* Sections */
-  .section { padding: 120px 0; }
-  .section__title { font-size: clamp(2.5rem, 3vw, 3.5rem); }
-  .section__sub { font-size: 1.2rem; }
+/* Info banner */
+.info-banner { padding: 2rem 2.5rem; border-radius: 14px; margin-bottom: 3rem; }
+.info-banner__icon { font-size: 2.2rem; }
+.info-banner__text { font-size: 1.15rem; line-height: 1.7; }
 
-  /* Cards, poles, activity */
-  .card { padding: 2.25rem; }
-  .card__title { font-size: 1.25rem; }
-  .card__text { font-size: 1rem; }
-  .pole { padding: 2.5rem; }
-  .pole__title { font-size: 1.55rem; }
-  .pole__desc { font-size: 1rem; }
-  .activity-card { padding: 2rem; }
-  .activity-card__title { font-size: 1.2rem; }
-  .activity-card__text { font-size: 1rem; }
+/* Accordion */
+.accordion-block__title { font-size: 1.3rem; padding: 1.75rem 2rem; }
+.accordion__btn { font-size: 1.2rem; padding: 1.75rem 2rem; min-height: 80px; }
+.accordion__arrow { font-size: 2rem; }
+.accordion__body li { font-size: 1.1rem; padding-left: 2rem; }
+.acc__competences { font-size: 1rem; padding: 1rem 1.5rem; }
 
-  /* Accordion */
-  .accordion__btn { font-size: 1.05rem; padding: 1.4rem 1.75rem; }
-  .accordion__body li { font-size: 0.98rem; }
+/* Activity cards */
+.activity-grid { gap: 2.5rem; }
+.activity-card { padding: 2.5rem; border-radius: 16px; }
+.activity-card__icon { font-size: 3rem; }
+.activity-card__title { font-size: 1.35rem; }
+.activity-card__text { font-size: 1.05rem; line-height: 1.8; }
+.activity-card__tools span { font-size: 0.9rem; padding: 6px 14px; }
+.activity-card__num { font-size: 0.85rem; }
 
-  /* Footer */
-  .footer__grid { gap: 4rem; }
-  .footer__links a { font-size: 0.95rem; }
+/* Projet final */
+.projet-final-card { padding: 4rem; border-radius: 20px; margin-top: 4rem; }
+.projet-final-card__tag { font-size: 0.9rem; padding: 6px 16px; margin-bottom: 1.5rem; }
+.projet-final-card__title { font-size: 2.2rem; }
+.projet-final-card__text { font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; }
+.step { gap: 1.5rem; }
+.step__num { width: 40px; height: 40px; font-size: 1rem; }
+.step__text { font-size: 1.1rem; padding-top: 6px; }
+.projet-final-card__steps { gap: 1.25rem; }
 
-  /* Page hero */
-  .page-hero { padding: 140px 0 80px; }
-  .page-hero__title { font-size: clamp(2.5rem, 4vw, 4rem); }
-  .page-hero__sub { font-size: 1.2rem; }
-}
+/* Two col */
+.two-col { gap: 3rem; }
 
-/* Très grand écran (≥ 1800px) — TV 65 pouces */
-@media (min-width: 1800px) {
-  :root { --container-max: 1700px; }
-  .container { max-width: 1700px; padding: 0 6rem; }
+/* CTA */
+.cta-block { padding: 6rem 3rem; }
+.cta-block__emoji { font-size: 5rem; }
+.cta-block__title { font-size: 4rem; }
+.cta-block__sub { font-size: 1.3rem; }
+.cta-block__note { font-size: 1rem; }
 
-  /* Nav parfaitement équilibrée */
-  .nav { height: 90px; padding: 0 7rem; }
-  .nav__badge { font-size: 0.88rem; padding: 4px 14px; }
-  .nav__name { font-size: 2rem; letter-spacing: 4px; }
-  .nav__links { gap: 5rem; }
-  .nav__links a { font-size: 1.15rem; }
-  .nav__cta { padding: 12px 28px; font-size: 1.1rem; border-radius: 8px; }
+/* Footer */
+.footer { padding: 5rem 0 2.5rem; }
+.footer__grid { gap: 6rem; }
+.footer__brand p { font-size: 1.1rem; }
+.footer__links h4 { font-size: 1.1rem; margin-bottom: 1.5rem; letter-spacing: 2px; }
+.footer__links ul { gap: 0.75rem; }
+.footer__links a { font-size: 1.05rem; }
+.footer__bottom { font-size: 0.95rem; padding-top: 2rem; }
 
-  /* Hero très grand */
-  .hero { padding: 160px 6rem 6rem; }
-  .hero__center { max-width: 1400px; }
-  .hero__title-big { font-size: clamp(10rem, 12vw, 16rem); letter-spacing: -8px; }
-  .hero__title-main { font-size: 2.5rem; letter-spacing: 8px; }
-  .hero__subtitle { font-size: 1.3rem; }
-  .hero__desc { font-size: 1.45rem; max-width: 900px; }
-  .hero__actions { gap: 2rem; }
-  .hero__stats { gap: 3.5rem; }
-  .stat__num { font-size: 3.2rem; }
-  .stat__label { font-size: 1rem; }
-  .stat__sep { height: 60px; }
-  .pill { font-size: 0.9rem; padding: 6px 18px; }
+/* Page hero (pages pÃ´les) */
+.page-hero { padding: 180px 0 100px; }
+.page-hero__tag { font-size: 0.95rem; padding: 8px 20px; }
+.page-hero__title { font-size: 5rem; }
+.page-hero__sub { font-size: 1.35rem; max-width: 900px; }
+.breadcrumb { font-size: 1rem; gap: 0.75rem; margin-bottom: 2rem; }
 
-  /* Boutons très grands pour tactile */
-  .btn { font-size: 1.3rem; padding: 20px 44px; min-height: 68px; border-radius: 12px; }
-  .btn--xl { font-size: 1.5rem; padding: 24px 56px; min-height: 80px; }
+/* SchÃ©mas */
+.schema-wrap { padding: 2.5rem; border-radius: 16px; }
 
-  /* Sections */
-  .section { padding: 150px 0; }
-  .section__title { font-size: 4.5rem; }
-  .section__sub { font-size: 1.4rem; max-width: 900px; }
-
-  /* Cards */
-  .cards-grid { gap: 2.5rem; }
-  .card { padding: 2.75rem; }
-  .card__icon { font-size: 3rem; }
-  .card__title { font-size: 1.5rem; }
-  .card__text { font-size: 1.1rem; }
-
-  /* Pôles */
-  .poles-grid { gap: 2.5rem; }
-  .pole { padding: 3rem; }
-  .pole__num { font-size: 3.5rem; }
-  .pole__title { font-size: 2rem; }
-  .pole__desc { font-size: 1.1rem; }
-  .pole__tags span { font-size: 0.95rem; padding: 6px 16px; }
-
-  /* Activity cards */
-  .activity-grid { gap: 2.5rem; }
-  .activity-card { padding: 2.5rem; }
-  .activity-card__icon { font-size: 3rem; }
-  .activity-card__title { font-size: 1.4rem; }
-  .activity-card__text { font-size: 1.1rem; }
-
-  /* Accordion */
-  .accordion__btn { font-size: 1.2rem; padding: 1.75rem 2rem; min-height: 72px; }
-  .accordion__body li { font-size: 1.1rem; }
-  .accordion-block__title { font-size: 1.3rem; padding: 1.5rem 2rem; }
-
-  /* Info banner */
-  .info-banner { padding: 1.75rem 2.5rem; }
-  .info-banner__icon { font-size: 2rem; }
-  .info-banner__text { font-size: 1.15rem; }
-
-  /* CTA */
-  .cta-block__emoji { font-size: 5rem; }
-  .cta-block__title { font-size: 4rem; }
-  .cta-block__sub { font-size: 1.4rem; }
-
-  /* Projet final */
-  .projet-final-card { padding: 3.5rem; }
-  .projet-final-card__title { font-size: 2rem; }
-  .projet-final-card__text { font-size: 1.1rem; }
-  .step__text { font-size: 1.05rem; }
-  .step__num { width: 36px; height: 36px; font-size: 0.9rem; }
-
-  /* Footer */
-  .footer { padding: 4rem 0 2rem; }
-  .footer__grid { gap: 6rem; }
-  .footer__links h4 { font-size: 1.1rem; }
-  .footer__links a { font-size: 1.05rem; }
-
-  /* Page hero */
-  .page-hero { padding: 170px 0 100px; }
-  .page-hero__title { font-size: 5rem; }
-  .page-hero__sub { font-size: 1.4rem; }
-  .breadcrumb { font-size: 1rem; }
-}
+/* Filiere SVG */
+.filiere-wrap { border-radius: 16px; }
